@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Task2</title>
+</head>
+<body>
+    <h1>Bar Plot: Percentage of Missing Reports by Neighborhood</h1>
+
+    <p style="margin-left: 50px; margin-top: 20px;">Put mouse over the chart to see the values🧐</p>
+    <div id="bar-tooltip" class="hidden"></div>
+    <svg id="bar" width="1350" height="560"></svg>
+    <script src = "bar.js"></script>
+
+    <h1>Stacked Bar: Average Damage Reports by Neighborhood and Category Over Time</h1>
+    <p style="margin-left: 50px; margin-top: 20px;">Put mouse over the chart to see the values🧐</p>
+    
+    <div id="container">
+        <div id="dropdownDiv">Select Neighborhood: </div>
+        <div id="chart"></div>
+    </div>
+
+    <script src = "stacked.js"></script>
+    
+    <h1>Scatter Plot: Correlation between Shake Intensity and Reported Building Damage by Neighborhood</h1>
+    <p style="margin-left: 50px; margin-top: 20px;">Put mouse over the chart to see the values🧐</p>
+    
+    <div id="scatter-tooltip" class="hidden">
+        <p>Shake Intensity: <span id="shake"></span></p>
+        <p>Building Damage: <span id="building"></span></p>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <label for="nb-select">Select Neighborhood:</label>
+                <select id="nb-select" class="form-control"></select>
+            </div>
+        </div>
+    </div>
+
+    <svg id="scatterplot" width="600" height="600"></svg>
+
+    <script src = "scatterplot.js"></script>
+</body>
+</html>
