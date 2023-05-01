@@ -69,7 +69,7 @@ d3.csv("reliability_data.csv").then(data => {
 	const xPosition = event.pageX;
 		const yPosition = event.pageY;
 
-		bar_tooltip.html(`<p>Location: ${d.location}</p><p>Percent Missing: ${(d.percent_reliable*1).toFixed(2)}%</p>`)
+		bar_tooltip.html(`<p>Location: ${d.location}</p><p>Percent Missing: ${(d.percent_missing*1).toFixed(2)}%</p>`)
 		.style("left", xPosition + "px")
 		.style("top", yPosition + "px")
 		.classed("hidden", false);
